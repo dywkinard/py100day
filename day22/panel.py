@@ -4,6 +4,7 @@ from turtle import Turtle
 class Panel(Turtle):
     def __init__(self, x):
         super().__init__()
+        self.score = 0
         self.penup()
         self.shape('square')
         self.color('white')

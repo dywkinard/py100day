@@ -23,9 +23,20 @@ while game_on:
     screen.update()
     ball.movement()
 
+    # Detect ball collisions
     if ball.ycor() > 280 or ball.ycor() < -280:
         ball.ybounce()
     if ball.distance(right_panel) < 50 and ball.xcor() > 320 or ball.distance(left_panel) < 50 and ball.xcor() < -320:
         ball.xbounce()
+    # Detect if panel misses  
+    if ball.xcor() > 380: 
+        left_panel.score += 1
+        ball.reset()
+        print(f"Lefts Score: {left_panel.score}\n Rights Score: {right_panel.score}")
+    elif ball.xcor() < -380:
+        right_panel.score += 1
+        ball.reset()
+        print(f"Lefts Score: {left_panel.score}\n Rights Score: {right_panel.score}")
+        
 
 screen.exitonclick()

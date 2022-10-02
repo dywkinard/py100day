@@ -21,3 +21,9 @@ class Ball(Turtle):
 
     def xbounce(self):
         self.x_move *= -1
+    
+    def reset(self):
+        self.hideturtle()
+        self.goto(0, 0)
+        self.xbounce()
+        self.showturtle()
