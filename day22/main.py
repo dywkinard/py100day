@@ -47,13 +47,11 @@ while game_on:
         lscore.clear()
         lscore.display(left_panel.score)
         ball.reset()
-        print(f"Lefts Score: {left_panel.score}\n Rights Score: {right_panel.score}")
     elif ball.xcor() < -380:
         right_panel.score += 1
         rscore.clear()
         rscore.display(right_panel.score)
         ball.reset()
-        print(f"Lefts Score: {left_panel.score}\n Rights Score: {right_panel.score}")
         
 
 screen.exitonclick()
