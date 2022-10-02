@@ -12,4 +12,4 @@ class Scoreboard(Turtle):
 
     def display(self, score):
         self.goto(self.position)
-        self.write(f"{score}", True, align="center", font=("Ubuntu", 20, 'normal'))
+        self.write(f"{score}", True, align="center", font=("Courier", 50, 'normal'))
