@@ -2,14 +2,14 @@ from turtle import Turtle
 
 
 class Panel(Turtle):
-    def __init__(self, x):
+    def __init__(self, x, y):
         super().__init__()
         self.score = 0
         self.penup()
         self.shape('square')
         self.color('white')
         self.turtlesize(stretch_wid=5, stretch_len=1)
-        self.goto(x, 0)
+        self.goto(x, y)
 
     def go_up(self):
         if self.ycor() > 200:
